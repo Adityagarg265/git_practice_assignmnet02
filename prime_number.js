@@ -1,18 +1,16 @@
 
 function checknum(num){
 
-let bag = 0
-for(let x=1; x<=num; x++){
- if(num%x==0){
-bag++
-}
-}
-if(bag==2){
-return true;
-}else{
+for(let x=2; x<=Math.sqrt(num); x++){
+   if(num%x==0){
 return false;
 }
 }
+return true;
+}
+}
+
+
 let ans = checknum(13);
 if(ans==true){
    console.log("Prime number")
